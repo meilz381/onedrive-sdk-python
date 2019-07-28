@@ -55,6 +55,8 @@ class HttpResponse(object):
                     }
 
             if "error" in message:
+                print (dict)
+                print (message["error"])
                 if type(message["error"]) == dict:
                     raise OneDriveError(message["error"], self.status)
                 else:
